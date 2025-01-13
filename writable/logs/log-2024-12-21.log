@@ -1,0 +1,1160 @@
+INFO - 2024-12-21 07:24:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 07:25:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 07:25:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 07:26:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-12-21 07:26:34 --> mysqli_sql_exception: Unknown column 'created_at' in 'field list' in F:\XAMPP\htdocs\Tugas Akhir\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 F:\XAMPP\htdocs\Tugas Akhir\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `pe...', 0)
+#1 F:\XAMPP\htdocs\Tugas Akhir\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 F:\XAMPP\htdocs\Tugas Akhir\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 F:\XAMPP\htdocs\Tugas Akhir\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 F:\XAMPP\htdocs\Tugas Akhir\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 F:\XAMPP\htdocs\Tugas Akhir\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 F:\XAMPP\htdocs\Tugas Akhir\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, false)
+#7 F:\XAMPP\htdocs\Tugas Akhir\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 F:\XAMPP\htdocs\Tugas Akhir\app\Controllers\PengunjungController.php(62): CodeIgniter\BaseModel->save(Array)
+#9 F:\XAMPP\htdocs\Tugas Akhir\system\CodeIgniter.php(933): App\Controllers\PengunjungController->tambahPengunjung()
+#10 F:\XAMPP\htdocs\Tugas Akhir\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengunjungController))
+#11 F:\XAMPP\htdocs\Tugas Akhir\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 F:\XAMPP\htdocs\Tugas Akhir\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 F:\XAMPP\htdocs\Tugas Akhir\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 F:\XAMPP\htdocs\Tugas Akhir\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 F:\XAMPP\htdocs\Tugas Akhir\system\rewrite.php(44): require_once('F:\\XAMPP\\htdocs...')
+#16 {main}
+CRITICAL - 2024-12-21 07:26:35 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'created_at' in 'field list'
+[Method: POST, Route: pengunjung/tambahPengunjung]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pengunjung` (`id_anggota`, `keperluan`, `created_at`, `updated_at`) VALUES (:id_anggota:, :keperluan:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\PengunjungController.php(62): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PengunjungController->tambahPengunjung()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengunjungController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+CRITICAL - 2024-12-21 07:26:35 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pengunjung` (`id_anggota`, `keperluan`, `created_at`, `updated_at`) VALUES (\'2929292929\', \'Membaca Buku\', \'2024-12-21 07:26:34\', \'2024-12-21 07:26:34\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pengunjung` (`id_anggota`, `keperluan`, `created_at`, `updated_at`) VALUES (\'2929292929\', \'Membaca Buku\', \'2024-12-21 07:26:34\', \'2024-12-21 07:26:34\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pengunjung` (`id_anggota`, `keperluan`, `created_at`, `updated_at`) VALUES (:id_anggota:, :keperluan:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\PengunjungController.php(62): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PengunjungController->tambahPengunjung()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengunjungController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+CRITICAL - 2024-12-21 07:26:35 --> [Caused by] mysqli_sql_exception: Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `pengunjung` (`id_anggota`, `keperluan`, `created_at`, `updated_at`) VALUES (\'2929292929\', \'Membaca Buku\', \'2024-12-21 07:26:34\', \'2024-12-21 07:26:34\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pengunjung` (`id_anggota`, `keperluan`, `created_at`, `updated_at`) VALUES (\'2929292929\', \'Membaca Buku\', \'2024-12-21 07:26:34\', \'2024-12-21 07:26:34\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pengunjung` (`id_anggota`, `keperluan`, `created_at`, `updated_at`) VALUES (\'2929292929\', \'Membaca Buku\', \'2024-12-21 07:26:34\', \'2024-12-21 07:26:34\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pengunjung` (`id_anggota`, `keperluan`, `created_at`, `updated_at`) VALUES (:id_anggota:, :keperluan:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\PengunjungController.php(62): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PengunjungController->tambahPengunjung()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengunjungController))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+INFO - 2024-12-21 07:27:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 07:28:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 07:28:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 07:28:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-21 07:28:09 --> ErrorException: Undefined array key "id_pengunjung"
+[Method: GET, Route: pengunjung/tampilanPengunjung]
+in APPPATH\Views\pengunjung\tampilanPengunjung.php on line 41.
+ 1 APPPATH\Views\pengunjung\tampilanPengunjung.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_pengunjung"', 'F:\\XAMPP\\htdocs\\Tugas Akhir\\app\\Views\\pengunjung\\tampilanPengunjung.php', 41)
+ 2 SYSTEMPATH\View\View.php(234): include('F:\\XAMPP\\htdocs\\Tugas Akhir\\app\\Views\\pengunjung\\tampilanPengunjung.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pengunjung/tampilanPengunjung', [], true)
+ 5 APPPATH\Controllers\PengunjungController.php(32): view('pengunjung/tampilanPengunjung', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PengunjungController->tampilanPengunjung()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengunjungController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+INFO - 2024-12-21 07:29:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-21 07:29:26 --> ErrorException: Undefined array key "id_pengunjung"
+[Method: GET, Route: pengunjung/tampilanPengunjung]
+in APPPATH\Views\pengunjung\tampilanPengunjung.php on line 36.
+ 1 APPPATH\Views\pengunjung\tampilanPengunjung.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_pengunjung"', 'F:\\XAMPP\\htdocs\\Tugas Akhir\\app\\Views\\pengunjung\\tampilanPengunjung.php', 36)
+ 2 SYSTEMPATH\View\View.php(234): include('F:\\XAMPP\\htdocs\\Tugas Akhir\\app\\Views\\pengunjung\\tampilanPengunjung.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pengunjung/tampilanPengunjung', [], true)
+ 5 APPPATH\Controllers\PengunjungController.php(32): view('pengunjung/tampilanPengunjung', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PengunjungController->tampilanPengunjung()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengunjungController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+INFO - 2024-12-21 07:33:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 07:33:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 07:33:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 07:34:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-21 07:34:20 --> ErrorException: Undefined property: App\Controllers\PengunjungController::$pengunjung_model
+[Method: GET, Route: pengunjung/tampilanEdit/2]
+in APPPATH\Controllers\PengunjungController.php on line 72.
+ 1 APPPATH\Controllers\PengunjungController.php(72): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\PengunjungController::$pengunjung_model', 'F:\\XAMPP\\htdocs\\Tugas Akhir\\app\\Controllers\\PengunjungController.php', 72)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PengunjungController->tampilanEdit('2')
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengunjungController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+INFO - 2024-12-21 07:36:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-21 07:36:09 --> ErrorException: Undefined property: App\Controllers\PengunjungController::$pengunjung_model
+[Method: POST, Route: pengunjung/ubahPengunjung]
+in APPPATH\Controllers\PengunjungController.php on line 110.
+ 1 APPPATH\Controllers\PengunjungController.php(110): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\PengunjungController::$pengunjung_model', 'F:\\XAMPP\\htdocs\\Tugas Akhir\\app\\Controllers\\PengunjungController.php', 110)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PengunjungController->ubahPengunjung()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengunjungController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+CRITICAL - 2024-12-21 07:36:48 --> CodeIgniter\Database\Exceptions\DatabaseException: Updates are not allowed unless they contain a "where" or "like" clause.
+[Method: POST, Route: pengunjung/ubahPengunjung]
+in SYSTEMPATH\Model.php on line 456.
+ 1 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(865): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Controllers\PengunjungController.php(110): CodeIgniter\Model->update(null, [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PengunjungController->ubahPengunjung()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengunjungController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+INFO - 2024-12-21 07:36:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 07:36:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-21 07:37:02 --> CodeIgniter\Database\Exceptions\DatabaseException: Updates are not allowed unless they contain a "where" or "like" clause.
+[Method: POST, Route: pengunjung/ubahPengunjung]
+in SYSTEMPATH\Model.php on line 456.
+ 1 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(865): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Controllers\PengunjungController.php(110): CodeIgniter\Model->update(null, [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PengunjungController->ubahPengunjung()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengunjungController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+INFO - 2024-12-21 07:38:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 07:38:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 07:38:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-21 07:38:13 --> CodeIgniter\Database\Exceptions\DatabaseException: Updates are not allowed unless they contain a "where" or "like" clause.
+[Method: POST, Route: pengunjung/ubahPengunjung]
+in SYSTEMPATH\Model.php on line 456.
+ 1 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(865): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Controllers\PengunjungController.php(110): CodeIgniter\Model->update(null, [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PengunjungController->ubahPengunjung()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengunjungController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+CRITICAL - 2024-12-21 07:46:13 --> CodeIgniter\Database\Exceptions\DatabaseException: Updates are not allowed unless they contain a "where" or "like" clause.
+[Method: POST, Route: pengunjung/ubahPengunjung]
+in SYSTEMPATH\Model.php on line 456.
+ 1 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(865): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Controllers\PengunjungController.php(110): CodeIgniter\Model->update(null, [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PengunjungController->ubahPengunjung()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengunjungController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+CRITICAL - 2024-12-21 07:46:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Updates are not allowed unless they contain a "where" or "like" clause.
+[Method: POST, Route: pengunjung/ubahPengunjung]
+in SYSTEMPATH\Model.php on line 456.
+ 1 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(865): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Controllers\PengunjungController.php(110): CodeIgniter\Model->update(null, [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PengunjungController->ubahPengunjung()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengunjungController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+CRITICAL - 2024-12-21 07:56:48 --> CodeIgniter\Database\Exceptions\DatabaseException: Updates are not allowed unless they contain a "where" or "like" clause.
+[Method: POST, Route: pengunjung/ubahPengunjung]
+in SYSTEMPATH\Model.php on line 456.
+ 1 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(865): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Controllers\PengunjungController.php(110): CodeIgniter\Model->update(null, [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PengunjungController->ubahPengunjung()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengunjungController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+INFO - 2024-12-21 07:56:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 07:56:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 07:57:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-12-21 07:57:21 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in F:\XAMPP\htdocs\Tugas Akhir\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 F:\XAMPP\htdocs\Tugas Akhir\system\Database\MySQLi\Connection.php(312): mysqli->query('UPDATE `pengunj...', 0)
+#1 F:\XAMPP\htdocs\Tugas Akhir\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `pengunj...')
+#2 F:\XAMPP\htdocs\Tugas Akhir\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `pengunj...')
+#3 F:\XAMPP\htdocs\Tugas Akhir\system\Database\BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query('UPDATE `pengunj...', Array, false)
+#4 F:\XAMPP\htdocs\Tugas Akhir\system\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+#5 F:\XAMPP\htdocs\Tugas Akhir\system\BaseModel.php(1028): CodeIgniter\Model->doUpdate(Array, Array)
+#6 F:\XAMPP\htdocs\Tugas Akhir\system\Model.php(865): CodeIgniter\BaseModel->update(Array, Array)
+#7 F:\XAMPP\htdocs\Tugas Akhir\app\Controllers\PengunjungController.php(110): CodeIgniter\Model->update('2', Array)
+#8 F:\XAMPP\htdocs\Tugas Akhir\system\CodeIgniter.php(933): App\Controllers\PengunjungController->ubahPengunjung()
+#9 F:\XAMPP\htdocs\Tugas Akhir\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengunjungController))
+#10 F:\XAMPP\htdocs\Tugas Akhir\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 F:\XAMPP\htdocs\Tugas Akhir\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 F:\XAMPP\htdocs\Tugas Akhir\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 F:\XAMPP\htdocs\Tugas Akhir\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 F:\XAMPP\htdocs\Tugas Akhir\system\rewrite.php(44): require_once('F:\\XAMPP\\htdocs...')
+#15 {main}
+CRITICAL - 2024-12-21 07:57:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+[Method: POST, Route: pengunjung/ubahPengunjung]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query('UPDATE `pengunjung` SET `id_anggota` = :id_anggota:, `keperluan` = :keperluan:, `updated_at` = :updated_at:
+WHERE `pengunjung`.`id_pengunjung` IN :pengunjung.id_pengunjung:', [...], false)
+ 2 SYSTEMPATH\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(865): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\PengunjungController.php(110): CodeIgniter\Model->update('2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PengunjungController->ubahPengunjung()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengunjungController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+CRITICAL - 2024-12-21 07:57:21 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `pengunjung` SET `id_anggota` = \'2929292929\', `keperluan` = \'Membaca Buku\', `updated_at` = \'2024-12-21 07:57:21\'
+WHERE `pengunjung`.`id_pengunjung` IN (\'2\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `pengunjung` SET `id_anggota` = \'2929292929\', `keperluan` = \'Membaca Buku\', `updated_at` = \'2024-12-21 07:57:21\'
+WHERE `pengunjung`.`id_pengunjung` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query('UPDATE `pengunjung` SET `id_anggota` = :id_anggota:, `keperluan` = :keperluan:, `updated_at` = :updated_at:
+WHERE `pengunjung`.`id_pengunjung` IN :pengunjung.id_pengunjung:', [...], false)
+ 4 SYSTEMPATH\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(865): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\PengunjungController.php(110): CodeIgniter\Model->update('2', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PengunjungController->ubahPengunjung()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengunjungController))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+CRITICAL - 2024-12-21 07:57:21 --> [Caused by] mysqli_sql_exception: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('UPDATE `pengunjung` SET `id_anggota` = \'2929292929\', `keperluan` = \'Membaca Buku\', `updated_at` = \'2024-12-21 07:57:21\'
+WHERE `pengunjung`.`id_pengunjung` IN (\'2\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `pengunjung` SET `id_anggota` = \'2929292929\', `keperluan` = \'Membaca Buku\', `updated_at` = \'2024-12-21 07:57:21\'
+WHERE `pengunjung`.`id_pengunjung` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `pengunjung` SET `id_anggota` = \'2929292929\', `keperluan` = \'Membaca Buku\', `updated_at` = \'2024-12-21 07:57:21\'
+WHERE `pengunjung`.`id_pengunjung` IN (\'2\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query('UPDATE `pengunjung` SET `id_anggota` = :id_anggota:, `keperluan` = :keperluan:, `updated_at` = :updated_at:
+WHERE `pengunjung`.`id_pengunjung` IN :pengunjung.id_pengunjung:', [...], false)
+ 5 SYSTEMPATH\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(865): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\PengunjungController.php(110): CodeIgniter\Model->update('2', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PengunjungController->ubahPengunjung()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengunjungController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+INFO - 2024-12-21 07:57:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-12-21 07:57:29 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in F:\XAMPP\htdocs\Tugas Akhir\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 F:\XAMPP\htdocs\Tugas Akhir\system\Database\MySQLi\Connection.php(312): mysqli->query('UPDATE `pengunj...', 0)
+#1 F:\XAMPP\htdocs\Tugas Akhir\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `pengunj...')
+#2 F:\XAMPP\htdocs\Tugas Akhir\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `pengunj...')
+#3 F:\XAMPP\htdocs\Tugas Akhir\system\Database\BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query('UPDATE `pengunj...', Array, false)
+#4 F:\XAMPP\htdocs\Tugas Akhir\system\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+#5 F:\XAMPP\htdocs\Tugas Akhir\system\BaseModel.php(1028): CodeIgniter\Model->doUpdate(Array, Array)
+#6 F:\XAMPP\htdocs\Tugas Akhir\system\Model.php(865): CodeIgniter\BaseModel->update(Array, Array)
+#7 F:\XAMPP\htdocs\Tugas Akhir\app\Controllers\PengunjungController.php(110): CodeIgniter\Model->update('2', Array)
+#8 F:\XAMPP\htdocs\Tugas Akhir\system\CodeIgniter.php(933): App\Controllers\PengunjungController->ubahPengunjung()
+#9 F:\XAMPP\htdocs\Tugas Akhir\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengunjungController))
+#10 F:\XAMPP\htdocs\Tugas Akhir\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 F:\XAMPP\htdocs\Tugas Akhir\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 F:\XAMPP\htdocs\Tugas Akhir\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 F:\XAMPP\htdocs\Tugas Akhir\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 F:\XAMPP\htdocs\Tugas Akhir\system\rewrite.php(44): require_once('F:\\XAMPP\\htdocs...')
+#15 {main}
+CRITICAL - 2024-12-21 07:57:29 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+[Method: POST, Route: pengunjung/ubahPengunjung]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query('UPDATE `pengunjung` SET `id_anggota` = :id_anggota:, `keperluan` = :keperluan:, `updated_at` = :updated_at:
+WHERE `pengunjung`.`id_pengunjung` IN :pengunjung.id_pengunjung:', [...], false)
+ 2 SYSTEMPATH\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(865): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\PengunjungController.php(110): CodeIgniter\Model->update('2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PengunjungController->ubahPengunjung()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengunjungController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+CRITICAL - 2024-12-21 07:57:29 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `pengunjung` SET `id_anggota` = \'2929292929\', `keperluan` = \'Meminjam Buku\', `updated_at` = \'2024-12-21 07:57:29\'
+WHERE `pengunjung`.`id_pengunjung` IN (\'2\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `pengunjung` SET `id_anggota` = \'2929292929\', `keperluan` = \'Meminjam Buku\', `updated_at` = \'2024-12-21 07:57:29\'
+WHERE `pengunjung`.`id_pengunjung` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query('UPDATE `pengunjung` SET `id_anggota` = :id_anggota:, `keperluan` = :keperluan:, `updated_at` = :updated_at:
+WHERE `pengunjung`.`id_pengunjung` IN :pengunjung.id_pengunjung:', [...], false)
+ 4 SYSTEMPATH\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(865): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\PengunjungController.php(110): CodeIgniter\Model->update('2', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PengunjungController->ubahPengunjung()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengunjungController))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+CRITICAL - 2024-12-21 07:57:29 --> [Caused by] mysqli_sql_exception: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('UPDATE `pengunjung` SET `id_anggota` = \'2929292929\', `keperluan` = \'Meminjam Buku\', `updated_at` = \'2024-12-21 07:57:29\'
+WHERE `pengunjung`.`id_pengunjung` IN (\'2\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `pengunjung` SET `id_anggota` = \'2929292929\', `keperluan` = \'Meminjam Buku\', `updated_at` = \'2024-12-21 07:57:29\'
+WHERE `pengunjung`.`id_pengunjung` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `pengunjung` SET `id_anggota` = \'2929292929\', `keperluan` = \'Meminjam Buku\', `updated_at` = \'2024-12-21 07:57:29\'
+WHERE `pengunjung`.`id_pengunjung` IN (\'2\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query('UPDATE `pengunjung` SET `id_anggota` = :id_anggota:, `keperluan` = :keperluan:, `updated_at` = :updated_at:
+WHERE `pengunjung`.`id_pengunjung` IN :pengunjung.id_pengunjung:', [...], false)
+ 5 SYSTEMPATH\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(865): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\PengunjungController.php(110): CodeIgniter\Model->update('2', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PengunjungController->ubahPengunjung()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengunjungController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+INFO - 2024-12-21 07:58:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 07:58:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 07:58:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 07:58:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-12-21 07:58:36 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in F:\XAMPP\htdocs\Tugas Akhir\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 F:\XAMPP\htdocs\Tugas Akhir\system\Database\MySQLi\Connection.php(312): mysqli->query('UPDATE `pengunj...', 0)
+#1 F:\XAMPP\htdocs\Tugas Akhir\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `pengunj...')
+#2 F:\XAMPP\htdocs\Tugas Akhir\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `pengunj...')
+#3 F:\XAMPP\htdocs\Tugas Akhir\system\Database\BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query('UPDATE `pengunj...', Array, false)
+#4 F:\XAMPP\htdocs\Tugas Akhir\system\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+#5 F:\XAMPP\htdocs\Tugas Akhir\system\BaseModel.php(1028): CodeIgniter\Model->doUpdate(Array, Array)
+#6 F:\XAMPP\htdocs\Tugas Akhir\system\Model.php(865): CodeIgniter\BaseModel->update(Array, Array)
+#7 F:\XAMPP\htdocs\Tugas Akhir\app\Controllers\PengunjungController.php(110): CodeIgniter\Model->update('2', Array)
+#8 F:\XAMPP\htdocs\Tugas Akhir\system\CodeIgniter.php(933): App\Controllers\PengunjungController->ubahPengunjung()
+#9 F:\XAMPP\htdocs\Tugas Akhir\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengunjungController))
+#10 F:\XAMPP\htdocs\Tugas Akhir\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 F:\XAMPP\htdocs\Tugas Akhir\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 F:\XAMPP\htdocs\Tugas Akhir\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 F:\XAMPP\htdocs\Tugas Akhir\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 F:\XAMPP\htdocs\Tugas Akhir\system\rewrite.php(44): require_once('F:\\XAMPP\\htdocs...')
+#15 {main}
+CRITICAL - 2024-12-21 07:58:36 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+[Method: POST, Route: pengunjung/ubahPengunjung]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query('UPDATE `pengunjung` SET `id_anggota` = :id_anggota:, `keperluan` = :keperluan:, `updated_at` = :updated_at:
+WHERE `pengunjung`.`id_pengunjung` IN :pengunjung.id_pengunjung:', [...], false)
+ 2 SYSTEMPATH\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(865): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\PengunjungController.php(110): CodeIgniter\Model->update('2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PengunjungController->ubahPengunjung()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengunjungController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+CRITICAL - 2024-12-21 07:58:36 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `pengunjung` SET `id_anggota` = \'2929292929\', `keperluan` = \'Meminjam Buku\', `updated_at` = \'2024-12-21 07:58:36\'
+WHERE `pengunjung`.`id_pengunjung` IN (\'2\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `pengunjung` SET `id_anggota` = \'2929292929\', `keperluan` = \'Meminjam Buku\', `updated_at` = \'2024-12-21 07:58:36\'
+WHERE `pengunjung`.`id_pengunjung` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query('UPDATE `pengunjung` SET `id_anggota` = :id_anggota:, `keperluan` = :keperluan:, `updated_at` = :updated_at:
+WHERE `pengunjung`.`id_pengunjung` IN :pengunjung.id_pengunjung:', [...], false)
+ 4 SYSTEMPATH\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(865): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\PengunjungController.php(110): CodeIgniter\Model->update('2', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PengunjungController->ubahPengunjung()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengunjungController))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+CRITICAL - 2024-12-21 07:58:36 --> [Caused by] mysqli_sql_exception: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('UPDATE `pengunjung` SET `id_anggota` = \'2929292929\', `keperluan` = \'Meminjam Buku\', `updated_at` = \'2024-12-21 07:58:36\'
+WHERE `pengunjung`.`id_pengunjung` IN (\'2\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `pengunjung` SET `id_anggota` = \'2929292929\', `keperluan` = \'Meminjam Buku\', `updated_at` = \'2024-12-21 07:58:36\'
+WHERE `pengunjung`.`id_pengunjung` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `pengunjung` SET `id_anggota` = \'2929292929\', `keperluan` = \'Meminjam Buku\', `updated_at` = \'2024-12-21 07:58:36\'
+WHERE `pengunjung`.`id_pengunjung` IN (\'2\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query('UPDATE `pengunjung` SET `id_anggota` = :id_anggota:, `keperluan` = :keperluan:, `updated_at` = :updated_at:
+WHERE `pengunjung`.`id_pengunjung` IN :pengunjung.id_pengunjung:', [...], false)
+ 5 SYSTEMPATH\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(865): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\PengunjungController.php(110): CodeIgniter\Model->update('2', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PengunjungController->ubahPengunjung()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengunjungController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+ERROR - 2024-12-21 08:07:25 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in F:\XAMPP\htdocs\Tugas Akhir\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 F:\XAMPP\htdocs\Tugas Akhir\system\Database\MySQLi\Connection.php(312): mysqli->query('UPDATE `pengunj...', 0)
+#1 F:\XAMPP\htdocs\Tugas Akhir\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `pengunj...')
+#2 F:\XAMPP\htdocs\Tugas Akhir\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `pengunj...')
+#3 F:\XAMPP\htdocs\Tugas Akhir\system\Database\BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query('UPDATE `pengunj...', Array, false)
+#4 F:\XAMPP\htdocs\Tugas Akhir\system\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+#5 F:\XAMPP\htdocs\Tugas Akhir\system\BaseModel.php(1028): CodeIgniter\Model->doUpdate(Array, Array)
+#6 F:\XAMPP\htdocs\Tugas Akhir\system\Model.php(865): CodeIgniter\BaseModel->update(Array, Array)
+#7 F:\XAMPP\htdocs\Tugas Akhir\app\Controllers\PengunjungController.php(109): CodeIgniter\Model->update('2', Array)
+#8 F:\XAMPP\htdocs\Tugas Akhir\system\CodeIgniter.php(933): App\Controllers\PengunjungController->ubahPengunjung()
+#9 F:\XAMPP\htdocs\Tugas Akhir\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengunjungController))
+#10 F:\XAMPP\htdocs\Tugas Akhir\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 F:\XAMPP\htdocs\Tugas Akhir\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 F:\XAMPP\htdocs\Tugas Akhir\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 F:\XAMPP\htdocs\Tugas Akhir\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 F:\XAMPP\htdocs\Tugas Akhir\system\rewrite.php(44): require_once('F:\\XAMPP\\htdocs...')
+#15 {main}
+CRITICAL - 2024-12-21 08:07:25 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+[Method: POST, Route: pengunjung/ubahPengunjung]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query('UPDATE `pengunjung` SET `id_anggota` = :id_anggota:, `keperluan` = :keperluan:, `updated_at` = :updated_at:
+WHERE `pengunjung`.`id_pengunjung` IN :pengunjung.id_pengunjung:', [...], false)
+ 2 SYSTEMPATH\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(865): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\PengunjungController.php(109): CodeIgniter\Model->update('2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PengunjungController->ubahPengunjung()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengunjungController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+CRITICAL - 2024-12-21 08:07:25 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `pengunjung` SET `id_anggota` = \'2929292929\', `keperluan` = \'Meminjam Buku\', `updated_at` = \'2024-12-21 08:07:25\'
+WHERE `pengunjung`.`id_pengunjung` IN (\'2\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `pengunjung` SET `id_anggota` = \'2929292929\', `keperluan` = \'Meminjam Buku\', `updated_at` = \'2024-12-21 08:07:25\'
+WHERE `pengunjung`.`id_pengunjung` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query('UPDATE `pengunjung` SET `id_anggota` = :id_anggota:, `keperluan` = :keperluan:, `updated_at` = :updated_at:
+WHERE `pengunjung`.`id_pengunjung` IN :pengunjung.id_pengunjung:', [...], false)
+ 4 SYSTEMPATH\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(865): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\PengunjungController.php(109): CodeIgniter\Model->update('2', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PengunjungController->ubahPengunjung()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengunjungController))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+CRITICAL - 2024-12-21 08:07:25 --> [Caused by] mysqli_sql_exception: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('UPDATE `pengunjung` SET `id_anggota` = \'2929292929\', `keperluan` = \'Meminjam Buku\', `updated_at` = \'2024-12-21 08:07:25\'
+WHERE `pengunjung`.`id_pengunjung` IN (\'2\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `pengunjung` SET `id_anggota` = \'2929292929\', `keperluan` = \'Meminjam Buku\', `updated_at` = \'2024-12-21 08:07:25\'
+WHERE `pengunjung`.`id_pengunjung` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `pengunjung` SET `id_anggota` = \'2929292929\', `keperluan` = \'Meminjam Buku\', `updated_at` = \'2024-12-21 08:07:25\'
+WHERE `pengunjung`.`id_pengunjung` IN (\'2\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query('UPDATE `pengunjung` SET `id_anggota` = :id_anggota:, `keperluan` = :keperluan:, `updated_at` = :updated_at:
+WHERE `pengunjung`.`id_pengunjung` IN :pengunjung.id_pengunjung:', [...], false)
+ 5 SYSTEMPATH\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(865): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\PengunjungController.php(109): CodeIgniter\Model->update('2', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PengunjungController->ubahPengunjung()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengunjungController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+INFO - 2024-12-21 08:07:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 08:07:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-12-21 08:07:35 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in F:\XAMPP\htdocs\Tugas Akhir\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 F:\XAMPP\htdocs\Tugas Akhir\system\Database\MySQLi\Connection.php(312): mysqli->query('UPDATE `pengunj...', 0)
+#1 F:\XAMPP\htdocs\Tugas Akhir\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `pengunj...')
+#2 F:\XAMPP\htdocs\Tugas Akhir\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `pengunj...')
+#3 F:\XAMPP\htdocs\Tugas Akhir\system\Database\BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query('UPDATE `pengunj...', Array, false)
+#4 F:\XAMPP\htdocs\Tugas Akhir\system\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+#5 F:\XAMPP\htdocs\Tugas Akhir\system\BaseModel.php(1028): CodeIgniter\Model->doUpdate(Array, Array)
+#6 F:\XAMPP\htdocs\Tugas Akhir\system\Model.php(865): CodeIgniter\BaseModel->update(Array, Array)
+#7 F:\XAMPP\htdocs\Tugas Akhir\app\Controllers\PengunjungController.php(109): CodeIgniter\Model->update('2', Array)
+#8 F:\XAMPP\htdocs\Tugas Akhir\system\CodeIgniter.php(933): App\Controllers\PengunjungController->ubahPengunjung()
+#9 F:\XAMPP\htdocs\Tugas Akhir\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengunjungController))
+#10 F:\XAMPP\htdocs\Tugas Akhir\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 F:\XAMPP\htdocs\Tugas Akhir\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 F:\XAMPP\htdocs\Tugas Akhir\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 F:\XAMPP\htdocs\Tugas Akhir\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 F:\XAMPP\htdocs\Tugas Akhir\system\rewrite.php(44): require_once('F:\\XAMPP\\htdocs...')
+#15 {main}
+CRITICAL - 2024-12-21 08:07:35 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+[Method: POST, Route: pengunjung/ubahPengunjung]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query('UPDATE `pengunjung` SET `id_anggota` = :id_anggota:, `keperluan` = :keperluan:, `updated_at` = :updated_at:
+WHERE `pengunjung`.`id_pengunjung` IN :pengunjung.id_pengunjung:', [...], false)
+ 2 SYSTEMPATH\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(865): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\PengunjungController.php(109): CodeIgniter\Model->update('2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PengunjungController->ubahPengunjung()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengunjungController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+CRITICAL - 2024-12-21 08:07:35 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `pengunjung` SET `id_anggota` = \'2929292929\', `keperluan` = \'Mengembalikan Buku\', `updated_at` = \'2024-12-21 08:07:35\'
+WHERE `pengunjung`.`id_pengunjung` IN (\'2\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `pengunjung` SET `id_anggota` = \'2929292929\', `keperluan` = \'Mengembalikan Buku\', `updated_at` = \'2024-12-21 08:07:35\'
+WHERE `pengunjung`.`id_pengunjung` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query('UPDATE `pengunjung` SET `id_anggota` = :id_anggota:, `keperluan` = :keperluan:, `updated_at` = :updated_at:
+WHERE `pengunjung`.`id_pengunjung` IN :pengunjung.id_pengunjung:', [...], false)
+ 4 SYSTEMPATH\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(865): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\PengunjungController.php(109): CodeIgniter\Model->update('2', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PengunjungController->ubahPengunjung()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengunjungController))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+CRITICAL - 2024-12-21 08:07:35 --> [Caused by] mysqli_sql_exception: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('UPDATE `pengunjung` SET `id_anggota` = \'2929292929\', `keperluan` = \'Mengembalikan Buku\', `updated_at` = \'2024-12-21 08:07:35\'
+WHERE `pengunjung`.`id_pengunjung` IN (\'2\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `pengunjung` SET `id_anggota` = \'2929292929\', `keperluan` = \'Mengembalikan Buku\', `updated_at` = \'2024-12-21 08:07:35\'
+WHERE `pengunjung`.`id_pengunjung` IN (\'2\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `pengunjung` SET `id_anggota` = \'2929292929\', `keperluan` = \'Mengembalikan Buku\', `updated_at` = \'2024-12-21 08:07:35\'
+WHERE `pengunjung`.`id_pengunjung` IN (\'2\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2516): CodeIgniter\Database\BaseConnection->query('UPDATE `pengunjung` SET `id_anggota` = :id_anggota:, `keperluan` = :keperluan:, `updated_at` = :updated_at:
+WHERE `pengunjung`.`id_pengunjung` IN :pengunjung.id_pengunjung:', [...], false)
+ 5 SYSTEMPATH\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(865): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\PengunjungController.php(109): CodeIgniter\Model->update('2', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PengunjungController->ubahPengunjung()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengunjungController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+INFO - 2024-12-21 08:09:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 08:09:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 08:15:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 08:15:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 08:15:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 08:15:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 08:15:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 08:15:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 08:16:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 08:16:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 08:16:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 08:18:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 08:18:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 08:18:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 08:18:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 08:19:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 08:19:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 08:19:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 08:19:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 08:19:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 08:19:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 08:22:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 08:22:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 08:22:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 08:22:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 08:22:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 08:22:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 08:22:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 08:22:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 08:22:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 08:22:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 08:23:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 08:24:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 08:24:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 08:24:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 08:24:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 08:26:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 08:26:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 08:26:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 08:26:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 08:26:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 08:26:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 08:26:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-12-21 09:05:29 --> mysqli_sql_exception: Table 'perpustakaan_0020.view_pengunjung' doesn't exist in F:\XAMPP\htdocs\Tugas Akhir\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 F:\XAMPP\htdocs\Tugas Akhir\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *\nFROM `...', 0)
+#1 F:\XAMPP\htdocs\Tugas Akhir\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 F:\XAMPP\htdocs\Tugas Akhir\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 F:\XAMPP\htdocs\Tugas Akhir\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 F:\XAMPP\htdocs\Tugas Akhir\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 F:\XAMPP\htdocs\Tugas Akhir\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 F:\XAMPP\htdocs\Tugas Akhir\app\Models\ViewPengunjungModel.php(23): CodeIgniter\BaseModel->findAll()
+#7 F:\XAMPP\htdocs\Tugas Akhir\app\Controllers\PengunjungController.php(23): App\Models\ViewPengunjungModel->getPengunjung()
+#8 F:\XAMPP\htdocs\Tugas Akhir\system\CodeIgniter.php(933): App\Controllers\PengunjungController->tampilanPengunjung()
+#9 F:\XAMPP\htdocs\Tugas Akhir\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengunjungController))
+#10 F:\XAMPP\htdocs\Tugas Akhir\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 F:\XAMPP\htdocs\Tugas Akhir\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 F:\XAMPP\htdocs\Tugas Akhir\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 F:\XAMPP\htdocs\Tugas Akhir\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 F:\XAMPP\htdocs\Tugas Akhir\system\rewrite.php(44): require_once('F:\\XAMPP\\htdocs...')
+#15 {main}
+CRITICAL - 2024-12-21 09:05:30 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'perpustakaan_0020.view_pengunjung' doesn't exist
+[Method: GET, Route: pengunjung/tampilanPengunjung]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `view_pengunjung`
+WHERE DATE(waktu_kunjungan) = :DATE(waktu_kunjungan):', [...], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\ViewPengunjungModel.php(23): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\PengunjungController.php(23): App\Models\ViewPengunjungModel->getPengunjung()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PengunjungController->tampilanPengunjung()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengunjungController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+CRITICAL - 2024-12-21 09:05:30 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'perpustakaan_0020.view_pengunjung' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `view_pengunjung`
+WHERE DATE(waktu_kunjungan) = \'2024-12-21\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `view_pengunjung`
+WHERE DATE(waktu_kunjungan) = \'2024-12-21\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `view_pengunjung`
+WHERE DATE(waktu_kunjungan) = :DATE(waktu_kunjungan):', [...], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\ViewPengunjungModel.php(23): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\PengunjungController.php(23): App\Models\ViewPengunjungModel->getPengunjung()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PengunjungController->tampilanPengunjung()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengunjungController))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+CRITICAL - 2024-12-21 09:05:30 --> [Caused by] mysqli_sql_exception: Table 'perpustakaan_0020.view_pengunjung' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *
+FROM `view_pengunjung`
+WHERE DATE(waktu_kunjungan) = \'2024-12-21\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `view_pengunjung`
+WHERE DATE(waktu_kunjungan) = \'2024-12-21\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `view_pengunjung`
+WHERE DATE(waktu_kunjungan) = \'2024-12-21\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `view_pengunjung`
+WHERE DATE(waktu_kunjungan) = :DATE(waktu_kunjungan):', [...], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\ViewPengunjungModel.php(23): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\PengunjungController.php(23): App\Models\ViewPengunjungModel->getPengunjung()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PengunjungController->tampilanPengunjung()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PengunjungController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+INFO - 2024-12-21 09:08:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 09:52:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 09:52:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-21 09:52:31 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "peminjaman/tampilanPeminjaman.php"
+[Method: GET, Route: peminjaman/tampilanPeminjaman]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('peminjaman/tampilanPeminjaman.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('peminjaman/tampilanPeminjaman', [], true)
+ 3 APPPATH\Controllers\PinjamController.php(30): view('peminjaman/tampilanPeminjaman', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PinjamController->tampilanPeminjaman()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PinjamController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+INFO - 2024-12-21 09:53:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 09:53:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-21 09:53:08 --> ErrorException: Undefined variable $Pengunjung
+[Method: GET, Route: peminjaman/tampilanPeminjaman]
+in APPPATH\Views\peminjaman\tampilanPeminjaman.php on line 41.
+ 1 APPPATH\Views\peminjaman\tampilanPeminjaman.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $Pengunjung', 'F:\\XAMPP\\htdocs\\Tugas Akhir\\app\\Views\\peminjaman\\tampilanPeminjaman.php', 41)
+ 2 SYSTEMPATH\View\View.php(234): include('F:\\XAMPP\\htdocs\\Tugas Akhir\\app\\Views\\peminjaman\\tampilanPeminjaman.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('peminjaman/tampilanPeminjaman', [], true)
+ 5 APPPATH\Controllers\PinjamController.php(30): view('peminjaman/tampilanPeminjaman', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PinjamController->tampilanPeminjaman()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PinjamController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+INFO - 2024-12-21 09:53:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-21 09:53:39 --> ErrorException: Undefined variable $peminjaman
+[Method: GET, Route: peminjaman/tampilanPeminjaman]
+in APPPATH\Views\peminjaman\tampilanPeminjaman.php on line 41.
+ 1 APPPATH\Views\peminjaman\tampilanPeminjaman.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $peminjaman', 'F:\\XAMPP\\htdocs\\Tugas Akhir\\app\\Views\\peminjaman\\tampilanPeminjaman.php', 41)
+ 2 SYSTEMPATH\View\View.php(234): include('F:\\XAMPP\\htdocs\\Tugas Akhir\\app\\Views\\peminjaman\\tampilanPeminjaman.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('peminjaman/tampilanPeminjaman', [], true)
+ 5 APPPATH\Controllers\PinjamController.php(30): view('peminjaman/tampilanPeminjaman', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PinjamController->tampilanPeminjaman()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PinjamController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+INFO - 2024-12-21 09:53:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 09:53:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-21 09:53:44 --> ErrorException: Undefined variable $peminjaman
+[Method: GET, Route: peminjaman/tampilanPeminjaman]
+in APPPATH\Views\peminjaman\tampilanPeminjaman.php on line 41.
+ 1 APPPATH\Views\peminjaman\tampilanPeminjaman.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $peminjaman', 'F:\\XAMPP\\htdocs\\Tugas Akhir\\app\\Views\\peminjaman\\tampilanPeminjaman.php', 41)
+ 2 SYSTEMPATH\View\View.php(234): include('F:\\XAMPP\\htdocs\\Tugas Akhir\\app\\Views\\peminjaman\\tampilanPeminjaman.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('peminjaman/tampilanPeminjaman', [], true)
+ 5 APPPATH\Controllers\PinjamController.php(30): view('peminjaman/tampilanPeminjaman', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PinjamController->tampilanPeminjaman()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PinjamController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+INFO - 2024-12-21 09:54:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-21 09:54:07 --> ErrorException: Undefined variable $peminjaman
+[Method: GET, Route: peminjaman/tampilanPeminjaman]
+in APPPATH\Views\peminjaman\tampilanPeminjaman.php on line 41.
+ 1 APPPATH\Views\peminjaman\tampilanPeminjaman.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $peminjaman', 'F:\\XAMPP\\htdocs\\Tugas Akhir\\app\\Views\\peminjaman\\tampilanPeminjaman.php', 41)
+ 2 SYSTEMPATH\View\View.php(234): include('F:\\XAMPP\\htdocs\\Tugas Akhir\\app\\Views\\peminjaman\\tampilanPeminjaman.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('peminjaman/tampilanPeminjaman', [], true)
+ 5 APPPATH\Controllers\PinjamController.php(30): view('peminjaman/tampilanPeminjaman', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PinjamController->tampilanPeminjaman()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PinjamController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+INFO - 2024-12-21 09:54:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 09:54:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 09:54:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 09:54:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 09:55:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 09:55:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 09:55:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 09:55:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 10:03:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 10:04:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 10:04:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 10:04:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 10:04:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 10:05:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 10:05:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 10:05:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 10:05:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 10:05:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:04:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:04:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:04:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:04:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:04:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:04:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:04:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:04:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:05:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:05:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:05:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:05:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:05:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:05:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:06:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:06:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:06:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:06:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:06:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:06:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:08:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:08:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:08:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:08:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-12-21 11:08:33 --> mysqli_sql_exception: Unknown column 'created_at' in 'field list' in F:\XAMPP\htdocs\Tugas Akhir\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 F:\XAMPP\htdocs\Tugas Akhir\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `pe...', 0)
+#1 F:\XAMPP\htdocs\Tugas Akhir\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 F:\XAMPP\htdocs\Tugas Akhir\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 F:\XAMPP\htdocs\Tugas Akhir\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 F:\XAMPP\htdocs\Tugas Akhir\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 F:\XAMPP\htdocs\Tugas Akhir\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 F:\XAMPP\htdocs\Tugas Akhir\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, false)
+#7 F:\XAMPP\htdocs\Tugas Akhir\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 F:\XAMPP\htdocs\Tugas Akhir\app\Controllers\PinjamController.php(63): CodeIgniter\BaseModel->save(Array)
+#9 F:\XAMPP\htdocs\Tugas Akhir\system\CodeIgniter.php(933): App\Controllers\PinjamController->tambahPeminjaman()
+#10 F:\XAMPP\htdocs\Tugas Akhir\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PinjamController))
+#11 F:\XAMPP\htdocs\Tugas Akhir\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 F:\XAMPP\htdocs\Tugas Akhir\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 F:\XAMPP\htdocs\Tugas Akhir\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 F:\XAMPP\htdocs\Tugas Akhir\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 F:\XAMPP\htdocs\Tugas Akhir\system\rewrite.php(44): require_once('F:\\XAMPP\\htdocs...')
+#16 {main}
+CRITICAL - 2024-12-21 11:08:33 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'created_at' in 'field list'
+[Method: POST, Route: peminjaman/tambahPeminjaman]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `peminjaman` (`id_anggota`, `id_buku`, `id_pengunjung`, `jumlah`, `durasi_peminjaman`, `status`, `created_at`, `updated_at`) VALUES (:id_anggota:, :id_buku:, :id_pengunjung:, :jumlah:, :durasi_peminjaman:, :status:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\PinjamController.php(63): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PinjamController->tambahPeminjaman()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PinjamController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+CRITICAL - 2024-12-21 11:08:33 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `peminjaman` (`id_anggota`, `id_buku`, `id_pengunjung`, `jumlah`, `durasi_peminjaman`, `status`, `created_at`, `updated_at`) VALUES (\'15002\', \'123\', \'2\', \'4\', \'1 bulan\', NULL, \'2024-12-21 11:08:33\', \'2024-12-21 11:08:33\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `peminjaman` (`id_anggota`, `id_buku`, `id_pengunjung`, `jumlah`, `durasi_peminjaman`, `status`, `created_at`, `updated_at`) VALUES (\'15002\', \'123\', \'2\', \'4\', \'1 bulan\', NULL, \'2024-12-21 11:08:33\', \'2024-12-21 11:08:33\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `peminjaman` (`id_anggota`, `id_buku`, `id_pengunjung`, `jumlah`, `durasi_peminjaman`, `status`, `created_at`, `updated_at`) VALUES (:id_anggota:, :id_buku:, :id_pengunjung:, :jumlah:, :durasi_peminjaman:, :status:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\PinjamController.php(63): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PinjamController->tambahPeminjaman()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PinjamController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+CRITICAL - 2024-12-21 11:08:33 --> [Caused by] mysqli_sql_exception: Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `peminjaman` (`id_anggota`, `id_buku`, `id_pengunjung`, `jumlah`, `durasi_peminjaman`, `status`, `created_at`, `updated_at`) VALUES (\'15002\', \'123\', \'2\', \'4\', \'1 bulan\', NULL, \'2024-12-21 11:08:33\', \'2024-12-21 11:08:33\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `peminjaman` (`id_anggota`, `id_buku`, `id_pengunjung`, `jumlah`, `durasi_peminjaman`, `status`, `created_at`, `updated_at`) VALUES (\'15002\', \'123\', \'2\', \'4\', \'1 bulan\', NULL, \'2024-12-21 11:08:33\', \'2024-12-21 11:08:33\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `peminjaman` (`id_anggota`, `id_buku`, `id_pengunjung`, `jumlah`, `durasi_peminjaman`, `status`, `created_at`, `updated_at`) VALUES (\'15002\', \'123\', \'2\', \'4\', \'1 bulan\', NULL, \'2024-12-21 11:08:33\', \'2024-12-21 11:08:33\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `peminjaman` (`id_anggota`, `id_buku`, `id_pengunjung`, `jumlah`, `durasi_peminjaman`, `status`, `created_at`, `updated_at`) VALUES (:id_anggota:, :id_buku:, :id_pengunjung:, :jumlah:, :durasi_peminjaman:, :status:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\PinjamController.php(63): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PinjamController->tambahPeminjaman()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PinjamController))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+INFO - 2024-12-21 11:09:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-12-21 11:09:21 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in F:\XAMPP\htdocs\Tugas Akhir\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 F:\XAMPP\htdocs\Tugas Akhir\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `pe...', 0)
+#1 F:\XAMPP\htdocs\Tugas Akhir\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 F:\XAMPP\htdocs\Tugas Akhir\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 F:\XAMPP\htdocs\Tugas Akhir\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 F:\XAMPP\htdocs\Tugas Akhir\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 F:\XAMPP\htdocs\Tugas Akhir\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 F:\XAMPP\htdocs\Tugas Akhir\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, false)
+#7 F:\XAMPP\htdocs\Tugas Akhir\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 F:\XAMPP\htdocs\Tugas Akhir\app\Controllers\PinjamController.php(63): CodeIgniter\BaseModel->save(Array)
+#9 F:\XAMPP\htdocs\Tugas Akhir\system\CodeIgniter.php(933): App\Controllers\PinjamController->tambahPeminjaman()
+#10 F:\XAMPP\htdocs\Tugas Akhir\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PinjamController))
+#11 F:\XAMPP\htdocs\Tugas Akhir\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 F:\XAMPP\htdocs\Tugas Akhir\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 F:\XAMPP\htdocs\Tugas Akhir\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 F:\XAMPP\htdocs\Tugas Akhir\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 F:\XAMPP\htdocs\Tugas Akhir\system\rewrite.php(44): require_once('F:\\XAMPP\\htdocs...')
+#16 {main}
+CRITICAL - 2024-12-21 11:09:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+[Method: POST, Route: peminjaman/tambahPeminjaman]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `peminjaman` (`id_anggota`, `id_buku`, `id_pengunjung`, `jumlah`, `durasi_peminjaman`, `status`) VALUES (:id_anggota:, :id_buku:, :id_pengunjung:, :jumlah:, :durasi_peminjaman:, :status:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\PinjamController.php(63): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PinjamController->tambahPeminjaman()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PinjamController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+CRITICAL - 2024-12-21 11:09:21 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `peminjaman` (`id_anggota`, `id_buku`, `id_pengunjung`, `jumlah`, `durasi_peminjaman`, `status`) VALUES (\'2929292929\', \'123\', \'2\', \'2\', \'1 bulan\', NULL)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `peminjaman` (`id_anggota`, `id_buku`, `id_pengunjung`, `jumlah`, `durasi_peminjaman`, `status`) VALUES (\'2929292929\', \'123\', \'2\', \'2\', \'1 bulan\', NULL)')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `peminjaman` (`id_anggota`, `id_buku`, `id_pengunjung`, `jumlah`, `durasi_peminjaman`, `status`) VALUES (:id_anggota:, :id_buku:, :id_pengunjung:, :jumlah:, :durasi_peminjaman:, :status:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\PinjamController.php(63): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PinjamController->tambahPeminjaman()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PinjamController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+CRITICAL - 2024-12-21 11:09:21 --> [Caused by] mysqli_sql_exception: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `peminjaman` (`id_anggota`, `id_buku`, `id_pengunjung`, `jumlah`, `durasi_peminjaman`, `status`) VALUES (\'2929292929\', \'123\', \'2\', \'2\', \'1 bulan\', NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `peminjaman` (`id_anggota`, `id_buku`, `id_pengunjung`, `jumlah`, `durasi_peminjaman`, `status`) VALUES (\'2929292929\', \'123\', \'2\', \'2\', \'1 bulan\', NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `peminjaman` (`id_anggota`, `id_buku`, `id_pengunjung`, `jumlah`, `durasi_peminjaman`, `status`) VALUES (\'2929292929\', \'123\', \'2\', \'2\', \'1 bulan\', NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `peminjaman` (`id_anggota`, `id_buku`, `id_pengunjung`, `jumlah`, `durasi_peminjaman`, `status`) VALUES (:id_anggota:, :id_buku:, :id_pengunjung:, :jumlah:, :durasi_peminjaman:, :status:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\PinjamController.php(63): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PinjamController->tambahPeminjaman()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PinjamController))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+INFO - 2024-12-21 11:10:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-12-21 11:10:32 --> mysqli_sql_exception: Unknown column 'created_at' in 'field list' in F:\XAMPP\htdocs\Tugas Akhir\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 F:\XAMPP\htdocs\Tugas Akhir\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `pe...', 0)
+#1 F:\XAMPP\htdocs\Tugas Akhir\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 F:\XAMPP\htdocs\Tugas Akhir\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 F:\XAMPP\htdocs\Tugas Akhir\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', Array, false)
+#4 F:\XAMPP\htdocs\Tugas Akhir\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 F:\XAMPP\htdocs\Tugas Akhir\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 F:\XAMPP\htdocs\Tugas Akhir\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, false)
+#7 F:\XAMPP\htdocs\Tugas Akhir\system\BaseModel.php(751): CodeIgniter\Model->insert(Array, false)
+#8 F:\XAMPP\htdocs\Tugas Akhir\app\Controllers\PinjamController.php(63): CodeIgniter\BaseModel->save(Array)
+#9 F:\XAMPP\htdocs\Tugas Akhir\system\CodeIgniter.php(933): App\Controllers\PinjamController->tambahPeminjaman()
+#10 F:\XAMPP\htdocs\Tugas Akhir\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PinjamController))
+#11 F:\XAMPP\htdocs\Tugas Akhir\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 F:\XAMPP\htdocs\Tugas Akhir\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#13 F:\XAMPP\htdocs\Tugas Akhir\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 F:\XAMPP\htdocs\Tugas Akhir\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 F:\XAMPP\htdocs\Tugas Akhir\system\rewrite.php(44): require_once('F:\\XAMPP\\htdocs...')
+#16 {main}
+CRITICAL - 2024-12-21 11:10:32 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'created_at' in 'field list'
+[Method: POST, Route: peminjaman/tambahPeminjaman]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `peminjaman` (`id_anggota`, `id_buku`, `id_pengunjung`, `jumlah`, `durasi_peminjaman`, `status`, `created_at`, `updated_at`) VALUES (:id_anggota:, :id_buku:, :id_pengunjung:, :jumlah:, :durasi_peminjaman:, :status:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\PinjamController.php(63): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PinjamController->tambahPeminjaman()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PinjamController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+CRITICAL - 2024-12-21 11:10:32 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `peminjaman` (`id_anggota`, `id_buku`, `id_pengunjung`, `jumlah`, `durasi_peminjaman`, `status`, `created_at`, `updated_at`) VALUES (\'2929292929\', \'123\', \'2\', \'2\', \'1 bulan\', NULL, \'2024-12-21 11:10:32\', \'2024-12-21 11:10:32\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `peminjaman` (`id_anggota`, `id_buku`, `id_pengunjung`, `jumlah`, `durasi_peminjaman`, `status`, `created_at`, `updated_at`) VALUES (\'2929292929\', \'123\', \'2\', \'2\', \'1 bulan\', NULL, \'2024-12-21 11:10:32\', \'2024-12-21 11:10:32\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `peminjaman` (`id_anggota`, `id_buku`, `id_pengunjung`, `jumlah`, `durasi_peminjaman`, `status`, `created_at`, `updated_at`) VALUES (:id_anggota:, :id_buku:, :id_pengunjung:, :jumlah:, :durasi_peminjaman:, :status:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\PinjamController.php(63): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PinjamController->tambahPeminjaman()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PinjamController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+CRITICAL - 2024-12-21 11:10:32 --> [Caused by] mysqli_sql_exception: Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `peminjaman` (`id_anggota`, `id_buku`, `id_pengunjung`, `jumlah`, `durasi_peminjaman`, `status`, `created_at`, `updated_at`) VALUES (\'2929292929\', \'123\', \'2\', \'2\', \'1 bulan\', NULL, \'2024-12-21 11:10:32\', \'2024-12-21 11:10:32\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `peminjaman` (`id_anggota`, `id_buku`, `id_pengunjung`, `jumlah`, `durasi_peminjaman`, `status`, `created_at`, `updated_at`) VALUES (\'2929292929\', \'123\', \'2\', \'2\', \'1 bulan\', NULL, \'2024-12-21 11:10:32\', \'2024-12-21 11:10:32\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `peminjaman` (`id_anggota`, `id_buku`, `id_pengunjung`, `jumlah`, `durasi_peminjaman`, `status`, `created_at`, `updated_at`) VALUES (\'2929292929\', \'123\', \'2\', \'2\', \'1 bulan\', NULL, \'2024-12-21 11:10:32\', \'2024-12-21 11:10:32\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `peminjaman` (`id_anggota`, `id_buku`, `id_pengunjung`, `jumlah`, `durasi_peminjaman`, `status`, `created_at`, `updated_at`) VALUES (:id_anggota:, :id_buku:, :id_pengunjung:, :jumlah:, :durasi_peminjaman:, :status:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(751): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\PinjamController.php(63): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PinjamController->tambahPeminjaman()
+11 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PinjamController))
+12 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+INFO - 2024-12-21 11:11:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:11:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:11:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:11:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:11:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:11:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:12:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:13:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:13:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:13:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:13:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:13:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:13:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:14:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:14:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:16:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:16:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:16:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:16:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:16:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:17:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:17:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:17:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:17:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:17:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:17:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:17:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:17:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:17:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:18:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:18:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:18:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:19:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:19:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:19:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:19:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:19:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:20:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:20:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:20:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:22:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:22:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:23:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:23:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:23:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:30:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:30:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 11:51:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 12:18:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 12:18:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 12:18:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-21 12:18:55 --> ErrorException: Undefined variable $pinjam
+[Method: GET, Route: pengembalian/tampilanPengembalian]
+in APPPATH\Views\pengembalian\tampilanPengembalian.php on line 36.
+ 1 APPPATH\Views\pengembalian\tampilanPengembalian.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pinjam', 'F:\\XAMPP\\htdocs\\Tugas Akhir\\app\\Views\\pengembalian\\tampilanPengembalian.php', 36)
+ 2 SYSTEMPATH\View\View.php(234): include('F:\\XAMPP\\htdocs\\Tugas Akhir\\app\\Views\\pengembalian\\tampilanPengembalian.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('pengembalian/tampilanPengembalian', [], true)
+ 5 APPPATH\Controllers\PenggembalianController.php(30): view('pengembalian/tampilanPengembalian', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PenggembalianController->tampilanPengembalian()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PenggembalianController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+INFO - 2024-12-21 12:19:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 12:30:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 12:30:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 12:30:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 12:30:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 12:31:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 12:31:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 12:31:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 12:31:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 12:31:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 12:32:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 12:35:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 12:36:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 12:38:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 12:39:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 12:39:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 12:39:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 12:39:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 12:39:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 12:41:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 12:41:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 12:41:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 12:42:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 12:42:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 12:43:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 12:43:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 12:43:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 12:43:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 12:43:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 12:43:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 12:43:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 12:44:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 12:44:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-21 12:44:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

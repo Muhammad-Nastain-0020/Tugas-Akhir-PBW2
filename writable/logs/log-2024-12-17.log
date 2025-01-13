@@ -1,0 +1,203 @@
+INFO - 2024-12-17 06:54:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-17 06:54:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-17 06:54:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-17 06:54:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-12-17 06:54:41 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in F:\XAMPP\htdocs\Tugas Akhir\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 F:\XAMPP\htdocs\Tugas Akhir\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'perpustakaan_00...', 3306, '', 0)
+#1 F:\XAMPP\htdocs\Tugas Akhir\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 F:\XAMPP\htdocs\Tugas Akhir\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 F:\XAMPP\htdocs\Tugas Akhir\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 F:\XAMPP\htdocs\Tugas Akhir\app\Models\UserModel.php(17): CodeIgniter\Database\BaseBuilder->get()
+#5 F:\XAMPP\htdocs\Tugas Akhir\app\Controllers\UserControl.php(30): App\Models\UserModel->getData('admin')
+#6 F:\XAMPP\htdocs\Tugas Akhir\system\CodeIgniter.php(933): App\Controllers\UserControl->login()
+#7 F:\XAMPP\htdocs\Tugas Akhir\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserControl))
+#8 F:\XAMPP\htdocs\Tugas Akhir\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 F:\XAMPP\htdocs\Tugas Akhir\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 F:\XAMPP\htdocs\Tugas Akhir\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 F:\XAMPP\htdocs\Tugas Akhir\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 F:\XAMPP\htdocs\Tugas Akhir\system\rewrite.php(44): require_once('F:\\XAMPP\\htdocs...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in F:\XAMPP\htdocs\Tugas Akhir\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 F:\XAMPP\htdocs\Tugas Akhir\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 F:\XAMPP\htdocs\Tugas Akhir\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 F:\XAMPP\htdocs\Tugas Akhir\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 F:\XAMPP\htdocs\Tugas Akhir\app\Models\UserModel.php(17): CodeIgniter\Database\BaseBuilder->get()
+#4 F:\XAMPP\htdocs\Tugas Akhir\app\Controllers\UserControl.php(30): App\Models\UserModel->getData('admin')
+#5 F:\XAMPP\htdocs\Tugas Akhir\system\CodeIgniter.php(933): App\Controllers\UserControl->login()
+#6 F:\XAMPP\htdocs\Tugas Akhir\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserControl))
+#7 F:\XAMPP\htdocs\Tugas Akhir\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 F:\XAMPP\htdocs\Tugas Akhir\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 F:\XAMPP\htdocs\Tugas Akhir\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 F:\XAMPP\htdocs\Tugas Akhir\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 F:\XAMPP\htdocs\Tugas Akhir\system\rewrite.php(44): require_once('F:\\XAMPP\\htdocs...')
+#12 {main}
+CRITICAL - 2024-12-17 06:54:41 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: POST, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `username` = :username:', [...], false)
+ 3 APPPATH\Models\UserModel.php(17): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\UserControl.php(30): App\Models\UserModel->getData('admin')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UserControl->login()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserControl))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+INFO - 2024-12-17 07:00:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-12-17 07:00:13 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in F:\XAMPP\htdocs\Tugas Akhir\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 F:\XAMPP\htdocs\Tugas Akhir\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'perpustakaan_00...', 3306, '', 0)
+#1 F:\XAMPP\htdocs\Tugas Akhir\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 F:\XAMPP\htdocs\Tugas Akhir\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 F:\XAMPP\htdocs\Tugas Akhir\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 F:\XAMPP\htdocs\Tugas Akhir\app\Models\UserModel.php(17): CodeIgniter\Database\BaseBuilder->get()
+#5 F:\XAMPP\htdocs\Tugas Akhir\app\Controllers\UserControl.php(30): App\Models\UserModel->getData('admin')
+#6 F:\XAMPP\htdocs\Tugas Akhir\system\CodeIgniter.php(933): App\Controllers\UserControl->login()
+#7 F:\XAMPP\htdocs\Tugas Akhir\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserControl))
+#8 F:\XAMPP\htdocs\Tugas Akhir\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 F:\XAMPP\htdocs\Tugas Akhir\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 F:\XAMPP\htdocs\Tugas Akhir\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 F:\XAMPP\htdocs\Tugas Akhir\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 F:\XAMPP\htdocs\Tugas Akhir\system\rewrite.php(44): require_once('F:\\XAMPP\\htdocs...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in F:\XAMPP\htdocs\Tugas Akhir\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 F:\XAMPP\htdocs\Tugas Akhir\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 F:\XAMPP\htdocs\Tugas Akhir\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 F:\XAMPP\htdocs\Tugas Akhir\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 F:\XAMPP\htdocs\Tugas Akhir\app\Models\UserModel.php(17): CodeIgniter\Database\BaseBuilder->get()
+#4 F:\XAMPP\htdocs\Tugas Akhir\app\Controllers\UserControl.php(30): App\Models\UserModel->getData('admin')
+#5 F:\XAMPP\htdocs\Tugas Akhir\system\CodeIgniter.php(933): App\Controllers\UserControl->login()
+#6 F:\XAMPP\htdocs\Tugas Akhir\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserControl))
+#7 F:\XAMPP\htdocs\Tugas Akhir\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 F:\XAMPP\htdocs\Tugas Akhir\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 F:\XAMPP\htdocs\Tugas Akhir\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 F:\XAMPP\htdocs\Tugas Akhir\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 F:\XAMPP\htdocs\Tugas Akhir\system\rewrite.php(44): require_once('F:\\XAMPP\\htdocs...')
+#12 {main}
+CRITICAL - 2024-12-17 07:00:13 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: POST, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `username` = :username:', [...], false)
+ 3 APPPATH\Models\UserModel.php(17): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\UserControl.php(30): App\Models\UserModel->getData('admin')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\UserControl->login()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserControl))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+INFO - 2024-12-17 07:10:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-17 07:18:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-17 07:23:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-17 07:27:08 --> ErrorException: Undefined property: CodeIgniter\View\View::$uri
+[Method: GET, Route: index]
+in APPPATH\Views\layout\header.php on line 42.
+ 1 APPPATH\Views\layout\header.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$uri', 'F:\\XAMPP\\htdocs\\Tugas Akhir\\app\\Views\\layout\\header.php', 42)
+ 2 SYSTEMPATH\View\View.php(234): include('F:\\XAMPP\\htdocs\\Tugas Akhir\\app\\Views\\layout\\header.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('layout/header', [], true)
+ 5 APPPATH\Controllers\Home.php(9): view('layout/header')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+CRITICAL - 2024-12-17 08:01:14 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Anggota/view_Member.php"
+[Method: GET, Route: member/TampilanMember]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Anggota/view_Member.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('Anggota/view_Member', [], true)
+ 3 APPPATH\Controllers\MemberControl.php(18): view('Anggota/view_Member', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MemberControl->TampilanMember()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MemberControl))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+CRITICAL - 2024-12-17 08:02:55 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Anggota/view_Member.php"
+[Method: GET, Route: member/TampilanMember]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Anggota/view_Member.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('Anggota/view_Member', [], true)
+ 3 APPPATH\Controllers\MemberControl.php(18): view('Anggota/view_Member', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MemberControl->TampilanMember()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MemberControl))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+CRITICAL - 2024-12-17 08:03:07 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Anggota/view_Member.php"
+[Method: GET, Route: member/TampilanMember]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Anggota/view_Member.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('Anggota/view_Member', [], true)
+ 3 APPPATH\Controllers\MemberControl.php(18): view('Anggota/view_Member', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MemberControl->TampilanMember()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MemberControl))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+CRITICAL - 2024-12-17 08:05:28 --> ErrorException: Undefined variable $getBarang
+[Method: GET, Route: member/TampilanMember]
+in APPPATH\Views\member\TampilanMember.php on line 32.
+ 1 APPPATH\Views\member\TampilanMember.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $getBarang', 'F:\\XAMPP\\htdocs\\Tugas Akhir\\app\\Views\\member\\TampilanMember.php', 32)
+ 2 SYSTEMPATH\View\View.php(234): include('F:\\XAMPP\\htdocs\\Tugas Akhir\\app\\Views\\member\\TampilanMember.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('/member/TampilanMember', [], true)
+ 5 APPPATH\Controllers\MemberControl.php(18): view('/member/TampilanMember', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MemberControl->TampilanMember()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MemberControl))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+INFO - 2024-12-17 08:12:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-17 08:12:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-17 08:14:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-17 09:14:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-17 12:05:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-17 12:05:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-17 12:06:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-17 12:06:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-17 12:07:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-17 12:08:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-17 12:11:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-17 12:12:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-17 12:13:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-17 12:14:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-17 12:14:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-17 12:17:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-17 12:44:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-17 12:45:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-17 12:45:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-17 12:53:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-17 12:54:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-17 12:54:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-17 12:56:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-17 13:08:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-17 13:09:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-17 13:09:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-17 13:09:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-17 13:10:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

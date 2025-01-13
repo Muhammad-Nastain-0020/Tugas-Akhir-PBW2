@@ -1,0 +1,23 @@
+ERROR - 2024-12-16 07:43:25 --> mysqli_sql_exception: Table 'perpustakaan_0020.user' doesn't exist in F:\XAMPP\htdocs\Tugas Akhir\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 F:\XAMPP\htdocs\Tugas Akhir\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `us...', 0)
+#1 F:\XAMPP\htdocs\Tugas Akhir\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 F:\XAMPP\htdocs\Tugas Akhir\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 F:\XAMPP\htdocs\Tugas Akhir\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 F:\XAMPP\htdocs\Tugas Akhir\app\Database\Seeds\User.php(16): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 F:\XAMPP\htdocs\Tugas Akhir\system\Database\Seeder.php(147): App\Database\Seeds\User->run()
+#6 F:\XAMPP\htdocs\Tugas Akhir\system\Commands\Database\Seed.php(79): CodeIgniter\Database\Seeder->call('App\\Database\\Se...')
+#7 F:\XAMPP\htdocs\Tugas Akhir\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Seed->run(Array)
+#8 F:\XAMPP\htdocs\Tugas Akhir\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('db:seed', Array)
+#9 F:\XAMPP\htdocs\Tugas Akhir\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#10 F:\XAMPP\htdocs\Tugas Akhir\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#11 F:\XAMPP\htdocs\Tugas Akhir\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#12 {main}
+INFO - 2024-12-16 08:09:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-16 08:09:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-16 08:09:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-16 08:11:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-16 08:12:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-16 08:12:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-16 08:18:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-16 08:30:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

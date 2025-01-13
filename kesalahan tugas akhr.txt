@@ -1,0 +1,3 @@
+koreksi project akhir web
+perbaiki sidebar agar tidak bergerak
+koreksi  inputan kode buku pada form penggembalian buku, jika buku tidak dipinjam maka akan menampilkan pesan kesalahan

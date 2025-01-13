@@ -1,0 +1,591 @@
+CRITICAL - 2024-12-18 00:19:53 --> ArgumentCountError: Too few arguments to function App\Controllers\MemberControl::__construct(), 0 passed in F:\XAMPP\htdocs\Tugas Akhir\system\CodeIgniter.php on line 903 and exactly 1 expected
+[Method: GET, Route: member/TampilanMember]
+in APPPATH\Controllers\MemberControl.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\MemberControl->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+INFO - 2024-12-18 00:21:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 00:21:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 00:21:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 00:21:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-12-18 00:22:02 --> mysqli_sql_exception: Table 'perpustakaan_0020.anggota' doesn't exist in F:\XAMPP\htdocs\Tugas Akhir\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 F:\XAMPP\htdocs\Tugas Akhir\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 F:\XAMPP\htdocs\Tugas Akhir\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 F:\XAMPP\htdocs\Tugas Akhir\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 F:\XAMPP\htdocs\Tugas Akhir\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 F:\XAMPP\htdocs\Tugas Akhir\system\Validation\StrictRules\Rules.php(232): CodeIgniter\Database\BaseBuilder->get()
+#5 F:\XAMPP\htdocs\Tugas Akhir\system\Validation\Validation.php(339): CodeIgniter\Validation\StrictRules\Rules->is_unique('15002', 'nisn', Array, NULL, 'nisn')
+#6 F:\XAMPP\htdocs\Tugas Akhir\system\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('nisn', 'nisn', '15002', Array, Array, 'nisn')
+#7 F:\XAMPP\htdocs\Tugas Akhir\app\Controllers\MemberControl.php(55): CodeIgniter\Validation\Validation->run()
+#8 F:\XAMPP\htdocs\Tugas Akhir\system\CodeIgniter.php(933): App\Controllers\MemberControl->TambahMember()
+#9 F:\XAMPP\htdocs\Tugas Akhir\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MemberControl))
+#10 F:\XAMPP\htdocs\Tugas Akhir\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 F:\XAMPP\htdocs\Tugas Akhir\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 F:\XAMPP\htdocs\Tugas Akhir\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 F:\XAMPP\htdocs\Tugas Akhir\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 F:\XAMPP\htdocs\Tugas Akhir\system\rewrite.php(44): require_once('F:\\XAMPP\\htdocs...')
+#15 {main}
+CRITICAL - 2024-12-18 00:22:02 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'perpustakaan_0020.anggota' doesn't exist
+[Method: POST, Route: member/TambahMember]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `anggota`
+WHERE `nisn` = :nisn:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\StrictRules\Rules.php(232): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\Validation.php(339): CodeIgniter\Validation\StrictRules\Rules->is_unique('15002', 'nisn', [...], null, 'nisn')
+ 4 SYSTEMPATH\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('nisn', 'nisn', '15002', [...], [...], 'nisn')
+ 5 APPPATH\Controllers\MemberControl.php(55): CodeIgniter\Validation\Validation->run()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MemberControl->TambahMember()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MemberControl))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+CRITICAL - 2024-12-18 00:22:02 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'perpustakaan_0020.anggota' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `anggota`
+WHERE `nisn` = \'15002\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `anggota`
+WHERE `nisn` = \'15002\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `anggota`
+WHERE `nisn` = :nisn:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Validation\StrictRules\Rules.php(232): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\Validation\Validation.php(339): CodeIgniter\Validation\StrictRules\Rules->is_unique('15002', 'nisn', [...], null, 'nisn')
+ 6 SYSTEMPATH\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('nisn', 'nisn', '15002', [...], [...], 'nisn')
+ 7 APPPATH\Controllers\MemberControl.php(55): CodeIgniter\Validation\Validation->run()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MemberControl->TambahMember()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MemberControl))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+CRITICAL - 2024-12-18 00:22:02 --> [Caused by] mysqli_sql_exception: Table 'perpustakaan_0020.anggota' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT 1
+FROM `anggota`
+WHERE `nisn` = \'15002\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `anggota`
+WHERE `nisn` = \'15002\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `anggota`
+WHERE `nisn` = \'15002\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `anggota`
+WHERE `nisn` = :nisn:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\StrictRules\Rules.php(232): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\Validation.php(339): CodeIgniter\Validation\StrictRules\Rules->is_unique('15002', 'nisn', [...], null, 'nisn')
+ 7 SYSTEMPATH\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('nisn', 'nisn', '15002', [...], [...], 'nisn')
+ 8 APPPATH\Controllers\MemberControl.php(55): CodeIgniter\Validation\Validation->run()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MemberControl->TambahMember()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MemberControl))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+INFO - 2024-12-18 00:23:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 00:23:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 00:32:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 00:32:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 00:33:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 00:33:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 00:33:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 00:33:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 00:34:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 00:35:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 00:35:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 00:35:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 00:40:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 00:40:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 00:40:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 00:41:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 00:46:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 00:46:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 00:47:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 00:48:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 00:49:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-12-18 00:49:10 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in F:\XAMPP\htdocs\Tugas Akhir\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 F:\XAMPP\htdocs\Tugas Akhir\system\Database\MySQLi\Connection.php(312): mysqli->query('DELETE FROM `me...', 0)
+#1 F:\XAMPP\htdocs\Tugas Akhir\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `me...')
+#2 F:\XAMPP\htdocs\Tugas Akhir\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `me...')
+#3 F:\XAMPP\htdocs\Tugas Akhir\system\Database\BaseBuilder.php(2843): CodeIgniter\Database\BaseConnection->query('DELETE FROM `me...', Array, false)
+#4 F:\XAMPP\htdocs\Tugas Akhir\system\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+#5 F:\XAMPP\htdocs\Tugas Akhir\system\BaseModel.php(1158): CodeIgniter\Model->doDelete(Array, false)
+#6 F:\XAMPP\htdocs\Tugas Akhir\app\Models\MemberModel.php(40): CodeIgniter\BaseModel->delete(Array)
+#7 F:\XAMPP\htdocs\Tugas Akhir\app\Controllers\MemberControl.php(131): App\Models\MemberModel->deleteMember('15001')
+#8 F:\XAMPP\htdocs\Tugas Akhir\system\CodeIgniter.php(933): App\Controllers\MemberControl->HapusMember('15001')
+#9 F:\XAMPP\htdocs\Tugas Akhir\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MemberControl))
+#10 F:\XAMPP\htdocs\Tugas Akhir\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 F:\XAMPP\htdocs\Tugas Akhir\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 F:\XAMPP\htdocs\Tugas Akhir\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 F:\XAMPP\htdocs\Tugas Akhir\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 F:\XAMPP\htdocs\Tugas Akhir\system\rewrite.php(44): require_once('F:\\XAMPP\\htdocs...')
+#15 {main}
+CRITICAL - 2024-12-18 00:49:10 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id' in 'where clause'
+[Method: POST, Route: MemberControl/15001]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2843): CodeIgniter\Database\BaseConnection->query('DELETE FROM `members`
+WHERE `id` IN :id:', [...], false)
+ 2 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH\BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH\Models\MemberModel.php(40): CodeIgniter\BaseModel->delete([...])
+ 5 APPPATH\Controllers\MemberControl.php(131): App\Models\MemberModel->deleteMember('15001')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MemberControl->HapusMember('15001')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MemberControl))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+CRITICAL - 2024-12-18 00:49:10 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `members`
+WHERE `id` IN (\'15001\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `members`
+WHERE `id` IN (\'15001\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2843): CodeIgniter\Database\BaseConnection->query('DELETE FROM `members`
+WHERE `id` IN :id:', [...], false)
+ 4 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 5 SYSTEMPATH\BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 6 APPPATH\Models\MemberModel.php(40): CodeIgniter\BaseModel->delete([...])
+ 7 APPPATH\Controllers\MemberControl.php(131): App\Models\MemberModel->deleteMember('15001')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MemberControl->HapusMember('15001')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MemberControl))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+CRITICAL - 2024-12-18 00:49:10 --> [Caused by] mysqli_sql_exception: Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('DELETE FROM `members`
+WHERE `id` IN (\'15001\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `members`
+WHERE `id` IN (\'15001\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `members`
+WHERE `id` IN (\'15001\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2843): CodeIgniter\Database\BaseConnection->query('DELETE FROM `members`
+WHERE `id` IN :id:', [...], false)
+ 5 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 6 SYSTEMPATH\BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 7 APPPATH\Models\MemberModel.php(40): CodeIgniter\BaseModel->delete([...])
+ 8 APPPATH\Controllers\MemberControl.php(131): App\Models\MemberModel->deleteMember('15001')
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MemberControl->HapusMember('15001')
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MemberControl))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+INFO - 2024-12-18 00:50:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-12-18 00:50:18 --> mysqli_sql_exception: Unknown column 'id' in 'where clause' in F:\XAMPP\htdocs\Tugas Akhir\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 F:\XAMPP\htdocs\Tugas Akhir\system\Database\MySQLi\Connection.php(312): mysqli->query('DELETE FROM `me...', 0)
+#1 F:\XAMPP\htdocs\Tugas Akhir\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `me...')
+#2 F:\XAMPP\htdocs\Tugas Akhir\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `me...')
+#3 F:\XAMPP\htdocs\Tugas Akhir\system\Database\BaseBuilder.php(2843): CodeIgniter\Database\BaseConnection->query('DELETE FROM `me...', Array, false)
+#4 F:\XAMPP\htdocs\Tugas Akhir\system\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+#5 F:\XAMPP\htdocs\Tugas Akhir\system\BaseModel.php(1158): CodeIgniter\Model->doDelete(Array, false)
+#6 F:\XAMPP\htdocs\Tugas Akhir\app\Models\MemberModel.php(40): CodeIgniter\BaseModel->delete(Array)
+#7 F:\XAMPP\htdocs\Tugas Akhir\app\Controllers\MemberControl.php(131): App\Models\MemberModel->deleteMember('15001')
+#8 F:\XAMPP\htdocs\Tugas Akhir\system\CodeIgniter.php(933): App\Controllers\MemberControl->HapusMember('15001')
+#9 F:\XAMPP\htdocs\Tugas Akhir\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MemberControl))
+#10 F:\XAMPP\htdocs\Tugas Akhir\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 F:\XAMPP\htdocs\Tugas Akhir\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 F:\XAMPP\htdocs\Tugas Akhir\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 F:\XAMPP\htdocs\Tugas Akhir\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 F:\XAMPP\htdocs\Tugas Akhir\system\rewrite.php(44): require_once('F:\\XAMPP\\htdocs...')
+#15 {main}
+CRITICAL - 2024-12-18 00:50:18 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id' in 'where clause'
+[Method: POST, Route: member/15001]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2843): CodeIgniter\Database\BaseConnection->query('DELETE FROM `members`
+WHERE `id` IN :id:', [...], false)
+ 2 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH\BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH\Models\MemberModel.php(40): CodeIgniter\BaseModel->delete([...])
+ 5 APPPATH\Controllers\MemberControl.php(131): App\Models\MemberModel->deleteMember('15001')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MemberControl->HapusMember('15001')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MemberControl))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+CRITICAL - 2024-12-18 00:50:18 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `members`
+WHERE `id` IN (\'15001\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `members`
+WHERE `id` IN (\'15001\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2843): CodeIgniter\Database\BaseConnection->query('DELETE FROM `members`
+WHERE `id` IN :id:', [...], false)
+ 4 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 5 SYSTEMPATH\BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 6 APPPATH\Models\MemberModel.php(40): CodeIgniter\BaseModel->delete([...])
+ 7 APPPATH\Controllers\MemberControl.php(131): App\Models\MemberModel->deleteMember('15001')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MemberControl->HapusMember('15001')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MemberControl))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+CRITICAL - 2024-12-18 00:50:18 --> [Caused by] mysqli_sql_exception: Unknown column 'id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('DELETE FROM `members`
+WHERE `id` IN (\'15001\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `members`
+WHERE `id` IN (\'15001\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `members`
+WHERE `id` IN (\'15001\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2843): CodeIgniter\Database\BaseConnection->query('DELETE FROM `members`
+WHERE `id` IN :id:', [...], false)
+ 5 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 6 SYSTEMPATH\BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 7 APPPATH\Models\MemberModel.php(40): CodeIgniter\BaseModel->delete([...])
+ 8 APPPATH\Controllers\MemberControl.php(131): App\Models\MemberModel->deleteMember('15001')
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MemberControl->HapusMember('15001')
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MemberControl))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+INFO - 2024-12-18 01:18:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 01:18:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 01:19:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 01:20:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 01:20:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 01:20:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 01:52:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 01:52:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 01:52:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 01:52:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 01:53:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 01:53:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 02:03:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-18 02:03:59 --> ErrorException: Undefined property: CodeIgniter\Validation\Validation::$hasError
+[Method: GET, Route: member/TampilanTambah]
+in APPPATH\Views\member\TampilanTambah.php on line 14.
+ 1 APPPATH\Views\member\TampilanTambah.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\Validation\\Validation::$hasError', 'F:\\XAMPP\\htdocs\\Tugas Akhir\\app\\Views\\member\\TampilanTambah.php', 14)
+ 2 SYSTEMPATH\View\View.php(234): include('F:\\XAMPP\\htdocs\\Tugas Akhir\\app\\Views\\member\\TampilanTambah.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('member/TampilanTambah', [], true)
+ 5 APPPATH\Controllers\MemberControl.php(42): view('member/TampilanTambah')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MemberControl->TampilanTambah()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MemberControl))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+CRITICAL - 2024-12-18 02:11:46 --> ErrorException: Undefined property: CodeIgniter\Validation\Validation::$hasError
+[Method: GET, Route: member/TampilanTambah]
+in APPPATH\Views\member\TampilanTambah.php on line 14.
+ 1 APPPATH\Views\member\TampilanTambah.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\Validation\\Validation::$hasError', 'F:\\XAMPP\\htdocs\\Tugas Akhir\\app\\Views\\member\\TampilanTambah.php', 14)
+ 2 SYSTEMPATH\View\View.php(234): include('F:\\XAMPP\\htdocs\\Tugas Akhir\\app\\Views\\member\\TampilanTambah.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('member/TampilanTambah', [], true)
+ 5 APPPATH\Controllers\MemberControl.php(39): view('member/TampilanTambah', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MemberControl->TampilanTambah()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MemberControl))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+INFO - 2024-12-18 02:11:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 02:11:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-18 02:11:53 --> ErrorException: Undefined property: CodeIgniter\Validation\Validation::$hasError
+[Method: GET, Route: member/TampilanTambah]
+in APPPATH\Views\member\TampilanTambah.php on line 14.
+ 1 APPPATH\Views\member\TampilanTambah.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\Validation\\Validation::$hasError', 'F:\\XAMPP\\htdocs\\Tugas Akhir\\app\\Views\\member\\TampilanTambah.php', 14)
+ 2 SYSTEMPATH\View\View.php(234): include('F:\\XAMPP\\htdocs\\Tugas Akhir\\app\\Views\\member\\TampilanTambah.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('member/TampilanTambah', [], true)
+ 5 APPPATH\Controllers\MemberControl.php(39): view('member/TampilanTambah', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MemberControl->TampilanTambah()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MemberControl))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+INFO - 2024-12-18 02:12:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 02:12:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-18 02:12:07 --> ErrorException: Undefined variable $validation
+[Method: GET, Route: member/TampilanEdit/15002]
+in APPPATH\Views\member\TampilanEdit.php on line 7.
+ 1 APPPATH\Views\member\TampilanEdit.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $validation', 'F:\\XAMPP\\htdocs\\Tugas Akhir\\app\\Views\\member\\TampilanEdit.php', 7)
+ 2 SYSTEMPATH\View\View.php(234): include('F:\\XAMPP\\htdocs\\Tugas Akhir\\app\\Views\\member\\TampilanEdit.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('member/TampilanEdit', [], true)
+ 5 APPPATH\Controllers\MemberControl.php(79): view('member/TampilanEdit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MemberControl->TampilanEdit('15002')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MemberControl))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+INFO - 2024-12-18 04:39:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 04:39:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 04:39:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 04:39:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 04:39:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 04:39:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 04:39:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 04:42:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 04:42:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 04:42:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 04:49:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 04:49:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 04:51:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 04:51:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 04:51:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 04:51:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 04:51:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 04:51:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 04:55:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 04:55:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 04:56:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 04:58:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 05:01:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 05:02:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 05:02:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 05:03:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 05:03:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 05:03:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 05:03:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-18 05:23:36 --> Error: Cannot call constructor
+[Method: GET, Route: member/TampilanTambah]
+in APPPATH\Controllers\MemberControl.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\MemberControl->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+CRITICAL - 2024-12-18 05:23:44 --> Error: Cannot call constructor
+[Method: GET, Route: member/TampilanMember]
+in APPPATH\Controllers\MemberControl.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\MemberControl->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+CRITICAL - 2024-12-18 05:23:47 --> Error: Cannot call constructor
+[Method: GET, Route: member/TampilanMember]
+in APPPATH\Controllers\MemberControl.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\MemberControl->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+INFO - 2024-12-18 05:24:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 05:24:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 05:25:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 05:25:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 05:25:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 05:29:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 05:29:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 05:29:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 05:29:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 05:29:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 05:29:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 05:29:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 05:29:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 05:30:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 05:30:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 05:32:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 05:32:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 05:32:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 05:32:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 05:32:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 05:32:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 05:32:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 05:33:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 05:33:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 05:34:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 05:34:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 05:34:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 05:35:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 05:35:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 05:38:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 05:38:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 05:38:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 05:38:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 05:38:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 05:39:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 05:39:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 05:40:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 05:40:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 05:49:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 05:50:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 05:50:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 05:50:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 05:50:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 05:55:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 05:56:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 05:56:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 05:56:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 05:57:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 05:57:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 05:57:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 05:57:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 05:57:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 06:55:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-12-18 07:27:14 --> mysqli_sql_exception: Can't create table `perpustakaan_0020`.`peminjaman` (errno: 150 "Foreign key constraint is incorrectly formed") in F:\XAMPP\htdocs\Tugas Akhir\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 F:\XAMPP\htdocs\Tugas Akhir\system\Database\MySQLi\Connection.php(312): mysqli->query('CREATE TABLE `p...', 0)
+#1 F:\XAMPP\htdocs\Tugas Akhir\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `p...')
+#2 F:\XAMPP\htdocs\Tugas Akhir\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `p...')
+#3 F:\XAMPP\htdocs\Tugas Akhir\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `p...')
+#4 F:\XAMPP\htdocs\Tugas Akhir\app\Database\Migrations\2024-12-18-065455_Peminjaman.php(42): CodeIgniter\Database\Forge->createTable('peminjaman')
+#5 F:\XAMPP\htdocs\Tugas Akhir\system\Database\MigrationRunner.php(867): App\Database\Migrations\Peminjaman->up()
+#6 F:\XAMPP\htdocs\Tugas Akhir\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 F:\XAMPP\htdocs\Tugas Akhir\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 F:\XAMPP\htdocs\Tugas Akhir\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 F:\XAMPP\htdocs\Tugas Akhir\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 F:\XAMPP\htdocs\Tugas Akhir\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 F:\XAMPP\htdocs\Tugas Akhir\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 F:\XAMPP\htdocs\Tugas Akhir\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2024-12-18 07:28:40 --> mysqli_sql_exception: Can't create table `perpustakaan_0020`.`peminjaman` (errno: 150 "Foreign key constraint is incorrectly formed") in F:\XAMPP\htdocs\Tugas Akhir\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 F:\XAMPP\htdocs\Tugas Akhir\system\Database\MySQLi\Connection.php(312): mysqli->query('CREATE TABLE `p...', 0)
+#1 F:\XAMPP\htdocs\Tugas Akhir\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `p...')
+#2 F:\XAMPP\htdocs\Tugas Akhir\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `p...')
+#3 F:\XAMPP\htdocs\Tugas Akhir\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `p...')
+#4 F:\XAMPP\htdocs\Tugas Akhir\app\Database\Migrations\2024-12-18-065455_Peminjaman.php(42): CodeIgniter\Database\Forge->createTable('peminjaman')
+#5 F:\XAMPP\htdocs\Tugas Akhir\system\Database\MigrationRunner.php(867): App\Database\Migrations\Peminjaman->up()
+#6 F:\XAMPP\htdocs\Tugas Akhir\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 F:\XAMPP\htdocs\Tugas Akhir\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 F:\XAMPP\htdocs\Tugas Akhir\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 F:\XAMPP\htdocs\Tugas Akhir\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 F:\XAMPP\htdocs\Tugas Akhir\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 F:\XAMPP\htdocs\Tugas Akhir\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 F:\XAMPP\htdocs\Tugas Akhir\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2024-12-18 07:31:41 --> mysqli_sql_exception: Can't create table `perpustakaan_0020`.`peminjaman` (errno: 150 "Foreign key constraint is incorrectly formed") in F:\XAMPP\htdocs\Tugas Akhir\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 F:\XAMPP\htdocs\Tugas Akhir\system\Database\MySQLi\Connection.php(312): mysqli->query('CREATE TABLE `p...', 0)
+#1 F:\XAMPP\htdocs\Tugas Akhir\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `p...')
+#2 F:\XAMPP\htdocs\Tugas Akhir\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `p...')
+#3 F:\XAMPP\htdocs\Tugas Akhir\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `p...')
+#4 F:\XAMPP\htdocs\Tugas Akhir\app\Database\Migrations\2024-12-18-065455_Peminjaman.php(42): CodeIgniter\Database\Forge->createTable('peminjaman')
+#5 F:\XAMPP\htdocs\Tugas Akhir\system\Database\MigrationRunner.php(867): App\Database\Migrations\Peminjaman->up()
+#6 F:\XAMPP\htdocs\Tugas Akhir\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 F:\XAMPP\htdocs\Tugas Akhir\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 F:\XAMPP\htdocs\Tugas Akhir\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 F:\XAMPP\htdocs\Tugas Akhir\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 F:\XAMPP\htdocs\Tugas Akhir\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 F:\XAMPP\htdocs\Tugas Akhir\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 F:\XAMPP\htdocs\Tugas Akhir\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+INFO - 2024-12-18 07:38:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-12-18 10:37:42 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in F:\XAMPP\htdocs\Tugas Akhir\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 F:\XAMPP\htdocs\Tugas Akhir\system\Database\MySQLi\Connection.php(186): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'perpustakaan_00...', 3306, '', 0)
+#1 F:\XAMPP\htdocs\Tugas Akhir\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 F:\XAMPP\htdocs\Tugas Akhir\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 F:\XAMPP\htdocs\Tugas Akhir\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 F:\XAMPP\htdocs\Tugas Akhir\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 F:\XAMPP\htdocs\Tugas Akhir\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 F:\XAMPP\htdocs\Tugas Akhir\app\Controllers\MemberControl.php(22): CodeIgniter\BaseModel->findAll()
+#7 F:\XAMPP\htdocs\Tugas Akhir\system\CodeIgniter.php(933): App\Controllers\MemberControl->TampilanMember()
+#8 F:\XAMPP\htdocs\Tugas Akhir\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MemberControl))
+#9 F:\XAMPP\htdocs\Tugas Akhir\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 F:\XAMPP\htdocs\Tugas Akhir\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 F:\XAMPP\htdocs\Tugas Akhir\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 F:\XAMPP\htdocs\Tugas Akhir\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 F:\XAMPP\htdocs\Tugas Akhir\system\rewrite.php(44): require_once('F:\\XAMPP\\htdocs...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in F:\XAMPP\htdocs\Tugas Akhir\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 F:\XAMPP\htdocs\Tugas Akhir\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 F:\XAMPP\htdocs\Tugas Akhir\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 F:\XAMPP\htdocs\Tugas Akhir\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 F:\XAMPP\htdocs\Tugas Akhir\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 F:\XAMPP\htdocs\Tugas Akhir\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 F:\XAMPP\htdocs\Tugas Akhir\app\Controllers\MemberControl.php(22): CodeIgniter\BaseModel->findAll()
+#6 F:\XAMPP\htdocs\Tugas Akhir\system\CodeIgniter.php(933): App\Controllers\MemberControl->TampilanMember()
+#7 F:\XAMPP\htdocs\Tugas Akhir\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MemberControl))
+#8 F:\XAMPP\htdocs\Tugas Akhir\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 F:\XAMPP\htdocs\Tugas Akhir\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 F:\XAMPP\htdocs\Tugas Akhir\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 F:\XAMPP\htdocs\Tugas Akhir\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 F:\XAMPP\htdocs\Tugas Akhir\system\rewrite.php(44): require_once('F:\\XAMPP\\htdocs...')
+#13 {main}
+CRITICAL - 2024-12-18 10:37:42 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: GET, Route: member/TampilanMember]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `members`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\MemberControl.php(22): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\MemberControl->TampilanMember()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MemberControl))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
+INFO - 2024-12-18 10:41:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 11:17:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 11:17:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 11:17:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 11:17:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 11:48:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 11:50:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 12:15:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 12:15:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 12:35:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 12:35:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 12:35:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 12:35:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-12-18 12:35:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-12-18 12:35:41 --> CodeIgniter\Validation\Exceptions\ValidationException: "year" is not a valid rule.
+[Method: POST, Route: buku/TambahBuku]
+in SYSTEMPATH\Validation\Validation.php on line 348.
+ 1 SYSTEMPATH\Validation\Validation.php(348): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('year')
+ 2 SYSTEMPATH\Validation\Validation.php(204): CodeIgniter\Validation\Validation->processRules('tahun_terbit', 'tahun_terbit', '2018', [...], [...], 'tahun_terbit')
+ 3 SYSTEMPATH\Controller.php(137): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\BooksController.php(43): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\BooksController->TambahBuku()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BooksController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('F:\\XAMPP\\htdocs\\Tugas Akhir\\public\\index.php')
